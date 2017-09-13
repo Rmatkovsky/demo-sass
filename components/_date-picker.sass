@@ -1,0 +1,107 @@
+.date-picker-custom
+    display: block
+    position: relative
+    z-index: 1
+
+.date-picker-label
+    position: relative
+    background-color: $white
+    cursor: pointer
+
+    &:hover
+        border-color: $FORM__borderColor
+
+.date-picker-content
+    display: none
+    position: absolute
+    width: 320px
+    top: 40px
+    background-color: $white
+    border: 1px solid $color-border-light
+    border-top: 0
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .05), 0 0 0 1px rgba(0, 0, 0, .07)
+
+    &.active
+        display: block
+
+.date-picker-toolbar
+    .toolbar-item
+        padding: .5rem 1.2rem
+        +box-sizing()
+        border-bottom: 1px solid $color-border-light
+        cursor: pointer
+
+        &:hover
+            background: $bg-light
+        &:first-child
+            border-top: 1px solid $color-border-light
+
+.DateRangePicker
+    display: block
+
+.DateRangePickerInput
+    display: none
+
+.DateRangePicker__picker
+    position: static
+    border-radius: $border-radius
+
+.DayPicker--horizontal
+    box-shadow: none
+
+.DayPickerNavigation__prev,
+.DayPickerNavigation__next
+    .fa
+        color: $color-theme
+
+        &:hover
+            // color from .button-primary
+            color: #8a7e59
+
+.CalendarMonth--horizontal
+    .CalendarMonth__caption
+        padding: 0 0 30px 0
+
+.DayPickerNavigation--horizontal
+    .DayPickerNavigation__next,
+    .DayPickerNavigation__prev
+        top: 5px
+
+.DayPicker__week-header
+    top: 42px
+
+.CalendarDay--valid
+    &.CalendarDay--selected-start,
+    &.CalendarDay--selected-end,
+    &.CalendarDay--selected-span,
+    &.CalendarDay--hovered-span
+        background: $color-theme
+        border: 1px double $bronze-dark
+        color: $white
+
+.CalendarDay--highlighted-calendar
+    border: 1px solid $color-border-light
+    background-color: $bg-light
+
+    &.CalendarDay--today
+        background: $white
+        border: 2px solid $error__background
+
+        &.CalendarDay--hovered-span,
+        &.CalendarDay--selected-span,
+        &.CalendarDay--selected-start,
+        &.CalendarDay--selected-end
+            background: $color-theme
+
+    &.CalendarDay--hovered
+        background: #e4e7e7
+
+        &.CalendarDay--hovered-span,
+        &.CalendarDay--selected-span,
+        &.CalendarDay--selected-start,
+        &.CalendarDay--selected-end
+            background: $color-theme
+
+    &:active
+        background-color: $color-theme
+        color: $white

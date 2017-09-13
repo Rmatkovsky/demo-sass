@@ -1,0 +1,70 @@
+.social-item
+    display: inline-block
+    background: $color-theme
+    color: #fff
+
+    font-size: 2.4rem
+
+    text-align: center
+
+    margin: 0 1rem 0 0
+
+    width: 3rem
+    height: 3rem
+    +round(.3rem)
+
+    overflow: hidden
+    cursor: pointer
+
+    &:hover
+        color: #fff
+        background: darken($color-theme, 10%)
+
+    .fa
+        font-size: inherit
+        vertical-align: top
+        margin-top: .3rem
+
+    .fa-instagram
+        //margin-top: .2rem
+        //margin-top: -.9rem
+        //font-size: 2.5rem
+        //margin-left: -.6rem
+
+
+.social-url
+    position: relative
+
+    .close
+        right: -2rem
+
+    .social-item
+        position: absolute
+        left: .5rem
+        top: .5rem
+        font-size: 2rem
+        width: 2.4rem
+        height: 2.4rem
+        z-index: -1
+
+
+
+    .fa-instagram
+        margin-top: .2rem
+
+    .field
+
+        padding-left: 4rem
+        background: rgba(255, 255, 255, .5)
+        transition: background linear 0.2s
+
+        &:focus
+            background: rgba(255, 255, 255, 0)
+
+    .social-link
+        display: block
+        padding-left: 4rem
+        word-wrap: break-word
+
+
+

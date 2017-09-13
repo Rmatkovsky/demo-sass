@@ -1,0 +1,28 @@
+.icon-field
+    position: relative
+
+    .field
+        width: 100%
+        padding-right: 4rem
+
+        &.active,
+        &:focus
+            + .fa,
+            + .field-inner-button .fa
+                color: $color-theme
+
+    .fa
+        position: absolute
+        right: .5rem
+        top: .5rem
+        width: 2.4rem
+        height: 2.4rem
+        font-size: 2rem
+        color: rgba($color-theme, 0.5)
+        +transition(color linear 0.2s)
+
+    .fa-search
+        margin-top: .1rem
+
+    .fa-calendar
+        margin-top: .1rem

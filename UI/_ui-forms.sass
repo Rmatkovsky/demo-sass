@@ -1,0 +1,150 @@
+.ui-forms
+
+    button
+
+        margin: 0 1rem 1rem 0
+
+    .container
+        margin: 0
+
+.ui__btn-type
+    display: inline-block
+    width: 15rem
+    margin: 0
+    vertical-align: top
+
+    .item
+        display: block
+        margin: 0
+
+
+.ui__btn-label
+    display: inline-block
+    width: 15rem
+    margin: 0
+    vertical-align: top
+
+    .item
+        display: block
+        margin: 0 0 1rem
+        padding: ($BaseLineHeight/2)*1rem 0
+
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------
+// FORM
+// --------------------------------------------------------------------------------------------------------------------
+
+//=ui-form($value)
+//
+//    .ui__form-padding
+//        &:after
+//            content: '#{$value}'
+//
+//    .ui__form
+//        &:after
+//            content: '#{$value}'
+
+
+.ui__form-list
+    padding: 0
+    margin: 0
+    list-style: none
+
+
+
+//$FORM__fontSize     : $BaseFontSize
+//$FORM__fontFamily   : $FontFamily
+//$FORM__lineHeight   : $BaseLineHeight
+//$FORM__padding      : ($BaseFontSize*$BaseLineHeight)/2 $BaseFontSize
+//$FORM__borderColor  : $color-border
+//$FORM__border       : 1px solid $FORM__borderColor
+//$FORM__color        : $color-text
+//$FORM__background   : #fff
+//$FORM__shadow       : rgba(50, 185, 240, 0.1 )
+//$FORM__shadow_hover : rgba(50, 185, 240, 0.75)
+
+.ui__form-font-family,
+.ui__form-font-size,
+.ui__form-line-height,
+.ui__form-padding,
+.ui__form-border,
+.ui__form-color,
+.ui__form-height
+    display: block
+    margin: 1rem 0
+
+    &:before
+        display: inline-block
+        width: 16rem
+        opacity: .5
+
+.ui__form-font-family
+    &:before
+        content: 'Font Family'
+
+.ui__form-font-size
+    &:before
+        content: 'Font Size'
+
+.ui__form-line-height
+    &:before
+        content: 'Line height'
+
+.ui__form-padding
+    &:before
+        content: 'Padding'
+
+.ui__form-border
+    &:before
+        content: 'Border'
+
+.ui__form-color
+    &:before
+        content: 'Color text'
+
+.ui__form-height
+    &:before
+        content: 'Height'
+
+
+// after
+// ____________________________________________________________
+
+
+
+.ui__form-font-family
+    &:after
+        content: '#{$FORM__fontFamily}'
+
+.ui__form-font-size
+    &:after
+        content: '#{$FORM__fontSize}'
+
+.ui__form-line-height
+    &:after
+        content: '#{$FORM__lineHeight}'
+
+.ui__form-padding
+    &:after
+        content: '#{$FORM__padding}'
+
+.ui__form-border
+    &:after
+        content: '#{$FORM__border}'
+
+.ui__form-color
+    &:after
+        content: '#{$FORM__color}'
+
+
+.ui__form-height
+    &:after
+        content: '#{$FORM__height}'
+
+
+
+

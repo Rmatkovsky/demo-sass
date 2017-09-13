@@ -1,0 +1,440 @@
+/**
+ *   FORM
+ *   date modification
+ *
+ **/
+
+
+////webkit, opera, IE9
+//::selection
+//    background: #ae1917
+//    color:      #fff
+
+
+
+////mozilla firefox
+//::-moz-selection
+//    background: #ae1917
+//    color:      #fff
+
+
+
+=formBaseStyle()
+    margin:  0
+    padding: $FORM__padding
+    font:
+        weight: normal
+        style: normal
+        size: $FORM__fontSize
+        family: $FORM__fontFamily
+
+    line-height: $FORM__lineHeight
+    text:
+        align:      left
+        decoration: none
+        overflow:   ellipsis
+        //shadow:     1px 0 0 #fff
+        indent:     0
+
+    white-space:     nowrap
+    overflow:        hidden
+    vertical-align:  middle
+    outline:         0 none
+    border:          $FORM__border
+
+    // Fix for IE
+    min-height: 3.4rem
+
+    +round(.3rem)
+    +box-sizing()
+    //-webkit-appearance: none
+    //appearance: none
+
+    // &:hover
+    //     border-color: #ffc107
+
+
+    &:focus,
+    &:active
+        outline: 0 none
+        border-color: $FORM__borderColor_focus
+
+
+
+
+//form
+//    display: inline-block // for IE
+
+form
+    display: block
+    margin:  0
+    padding: 0
+
+fieldset
+    padding: 0
+    margin:  0
+    border:  0
+
+legend
+    margin:      0 0 0 10px
+    padding:     0 10px
+    font-weight: bold
+
+    font-size:   1.2em
+    line-height: 1.5em
+    //color:       #2d2d2d
+
+    small
+        font-size:  $BaseLineHeight * 0.75
+
+label
+    font-weight: normal
+
+[disabled],
+[readonly]
+    background-color: #f5f5f5
+    border-color:     $color-white
+    cursor:           default
+    +user-select()
+
+
+    &:hover,
+    &:focus,
+    &:active
+        outline: 0 none
+        border-color: $color-white
+
+
+[readonly]:focus  
+    outline: 0 none
+    border-color:  $FORM__borderColor
+
+[placeholder]
+    &:-moz-placeholder
+        color: $color__placeholder
+
+    &:-ms-input-placeholder
+        color: $color__placeholder
+
+    &::-webkit-input-placeholder
+        color: $color__placeholder
+
+
+//  INPUT
+input[type='text'],
+input[type='password'],
+select,
+textarea
+    transition: border linear 0.2s, box-shadow linear 0.2s
+
+
+//input
+//    +formBaseStyle()
+
+
+input[type='text'],
+input[type='password']
+    +formBaseStyle()
+
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"]
+    +formBaseStyle()
+
+button
+    &:focus,
+    &:active
+        outline: 0 none
+        //border-color: #ffa000
+
+
+// SELECT
+
+
+select
+    +formBaseStyle()
+
+    background: $color-white url('data:image/gif;base64,R0lGODlhDwAIAIABAFJSUv///yH5BAEAAAEALAAAAAAPAAgAAAIQjA2nG+C8nIS0WiafnbfVAgA7') 100% 50% no-repeat
+
+    -webkit-appearance:     none
+    -webkit-padding-end:    2rem
+    -webkit-padding-start:  1rem
+    -webkit-user-select:    none
+
+    -moz-appearance:        none
+    -moz-padding-end:       2rem
+    -moz-padding-start:     1rem
+    -moz-user-select:       none
+
+    appearance:     none
+    padding-end:    2rem
+    padding-start:  1rem
+    user-select:    none
+    cursor: pointer
+
+    &::-ms-expand
+        display: none
+
+
+
+select[multiple],
+select[size]
+    height: auto
+
+optgroup
+    font-size:  inherit
+    font-style: normal
+
+
+//  INPUT type = file
+input[type="file"]
+
+    font-size: 1.2rem
+    cursor: pointer
+
+    &::-webkit-file-upload-button
+        position: relative
+
+        +formBaseStyle()
+        +round()
+        +gradient-vertical(#f9f9f9, #e2e2e2)
+
+        padding: $FORM__borderColor
+        background: #fff
+        //background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.30, #e2e2e2), color-stop(0.70, #f9f9f9))
+        -webkit-transition: border linear 0.2s, box-shadow linear 0.2s
+        -webkit-padding-start:  1rem
+        -webkit-padding-end:    1rem
+        -webkit-appearance:     button
+        cursor: pointer
+
+        &:hover
+            border-color: $FORM__borderColor
+            //+box-shadow(0 0 5px $FORM__shadow_hover)
+
+//  TEXTAREA
+textarea
+
+    +formBaseStyle()
+
+    +round()
+
+    text-indent: 0
+    background-color: #fff
+    white-space: pre-wrap
+    word-wrap:   break-word
+    resize:      vertical
+
+    &:focus
+        outline: 0 none
+        //+box-shadow(0 0 5px $FORM__shadow_hover)
+
+select,
+textarea,
+input[type='text'],
+input[type='password'],
+input[type='checkbox']
+
+    // &:hover
+    //     border-color: #cccccc
+
+    &:focus
+        outline: 0 none
+
+    &[readonly]:focus
+        border-color:  $FORM__borderColor
+
+input,
+select,
+textarea
+
+    //&.show-error
+    //    border-color: $warning__color
+
+    &.show-error
+        border-color: $color-red !important
+
+        &:hover
+            border-color: $color-red !important
+        &:focus
+            border-color: $color-red !important
+
+
+
+.text-error
+    display: block
+    //font-size: $text-small
+    color: $color-red
+
+
+
+.validation-text
+    display: block
+    font-size: 1.2rem
+    font-weight: 500
+    color: $color-red
+
+
+
+.check-box
+    display: none
+    margin: 0 2px 2px 2px
+    vertical-align: middle
+
+    & + .marker
+        cursor: pointer
+
+        &:before
+            position: relative
+            display: inline-block
+            width: 16px
+            height: 16px
+            margin: -3px 5px 0 0
+            border: 1px solid $FORM__borderColor
+            background-color: #f7f7f7
+            +round(2px)
+            +box-sizing()
+            +transition( border-color 150ms ease )
+            +user-select(none)
+            vertical-align: middle
+            cursor: pointer
+
+            content: ''
+
+        &:hover
+            &:before
+                border-color: $bronze
+
+    &:checked + .marker
+
+        &:before
+            border-color: $bronze
+            background:
+                color: $bronze
+                image: url($PATH_CHECKBOX)
+                position: -1px -1px
+                repeat: no-repeat
+
+    &[disabled] + .marker
+        color: $color-light
+        cursor: default
+
+        &:before
+            cursor: default
+
+
+
+
+.radio-box
+    display: none
+    margin: 0 2px 2px 2px
+    vertical-align: middle
+
+    & + .marker
+        cursor: pointer
+
+        &:before
+            position: relative
+            display: inline-block
+            width: 16px
+            height: 16px
+            margin: -3px 5px 0 0
+            border: 1px solid $FORM__borderColor
+            background-color: #f7f7f7
+            +round(50%)
+            +box-sizing()
+            vertical-align: middle
+            cursor: pointer
+            content: ''
+
+    &:checked + .marker
+        &:before
+            border: 1px solid $bronze
+            background-color: $bronze
+            +box-shadow(inset 0 0 0 4px #fff)
+
+    &[disabled] + .marker
+        color: $color-light
+        cursor: default
+
+        &:before
+            cursor: default
+
+
+
+
+
+
+.field-search
+    position: relative
+    display: inline-block
+
+    .field
+        width: 100%
+        padding-right: 30px
+        background: rgba(255,255,255,.0)
+
+    .fa-search
+        position: relative
+        top: .6rem
+        left: -.8rem
+        float: right
+        margin: 0 0 -2rem -2rem
+        width: 2rem
+        height: 2rem
+        font-size: 2rem
+        color: #d4d4d4
+
+
+
+
+
+
+
+
+
+
+
+// Input
+.field-item
+    position: relative
+    margin-bottom: 1rem
+
+
+
+
+.field-floating
+    position: relative
+    transition: all 0.2s ease-in-out
+
+    .place-holder
+        position: absolute
+        color: $text-placeholder
+        font-size: $font-xs
+        margin: 0
+        top:    1.2rem
+        left:   1.4rem
+        transform: translate3d(0, 0, 0)
+        transition: all 0.2s ease-in-out
+        will-change: left, top, contents
+        cursor: text
+
+    .field
+        padding-top: 1.4rem
+        padding-bottom: 0.4rem
+
+        &:focus + .place-holder
+            font-size: 11px
+            transform: translate3d(0, -1rem, 0)
+
+

@@ -1,0 +1,58 @@
+.tabs
+    display: block
+    padding: 0
+    margin: 3rem 0 2rem
+    list-style: none
+    border-bottom: 1px solid $color-border
+
+    .tab-item
+        display: inline-block
+        padding: 0
+        margin: 0 1rem
+        list-style: none
+        vertical-align: top
+
+        &:first-child
+            margin-left: 0
+
+    .tab-link
+        display: block
+        font-size: 1.6rem
+        padding: .5rem 1rem
+
+        color: $color-text
+        text-decoration: none
+        //text-transform: uppercase
+        +user-select()
+        cursor: pointer
+
+        &:hover
+            color: $color-link
+            text-decoration: none
+
+        &.active,
+        &.active:hover
+            margin: 0 0 -3px
+            border-bottom: 3px solid transparent
+            color: $color-link
+            border-bottom-color: $color-bronze
+            cursor: default
+
+        &.disabled,
+        &.disabled:hover
+            color: $color-light
+            cursor: default
+
+
+
+
+
+
+
+
+
+
+
+
+
+

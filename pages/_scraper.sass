@@ -1,0 +1,60 @@
+.scraper__toolbar
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    margin-bottom: 2rem
+
+    .tabs-form
+        .button
+            min-width: 10.8rem
+
+.scraper-card
+
+    &.error
+        .row:not(:first-child)
+            .item
+                border-bottom: 1px solid $color-red
+
+    +round()
+    margin: 2.5rem 0
+    border: .1rem solid $bronze-light-1
+    overflow: hidden
+
+    .scraper-card-footer
+        background-color: #f1f1f1
+        padding: 1.2rem 0
+        text-align: right
+
+
+    .item
+        white-space: normal
+
+        &:first-child
+            padding-left: 1.2rem
+
+        &:last-child
+            padding-right: 1.2rem
+
+        &.match
+            width: 28.5rem
+            padding: 1.2rem 0
+            text-align: right
+
+        &.color
+            width: 5rem
+
+    .item:nth-last-child(2)
+        text-align: right
+
+    .button,
+    .button-primary
+        min-width: 12rem
+
+    //.scraper-card__rating
+    //    position: relative
+    //
+    //    .popover
+    //        left: 50%
+    //        transform: translateX(-50%)
+    //        margin-left: -.5rem
+    //        bottom: -3.5rem

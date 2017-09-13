@@ -1,0 +1,293 @@
+//
+// Control
+// ------------------------------
+
+
+.Select
+    //position: relative
+    font-size: $FORM__fontSize
+
+
+// handle disabled state
+.is-disabled
+
+    .Select-control
+        background-color: $select-input-bg-disabled
+        &:hover
+            box-shadow: none
+
+    .Select-arrow-zone
+        cursor: default
+        pointer-events: none
+
+// base
+.Select-control
+    position: relative
+    display: table
+    width: 100%
+
+    +box-sizing()
+    +round()
+
+
+    background-color: $select-input-bg
+    border: $select-input-border-color
+
+    border: $select-input-border-width solid $select-input-border-color
+    color: $select-text-color
+    //cursor: default
+
+    border-spacing: 0
+    border-collapse: separate
+    //height: $select-input-height
+    outline: none
+    overflow: hidden
+
+    cursor: pointer
+
+    z-index: 1
+
+
+
+    &:hover
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06)
+
+    .Select-input:focus
+        outline: none
+
+.is-open
+    position: relative
+
+.is-focused
+    position: relative
+
+    .Select-control
+        border-color: $FORM__borderColor_focus
+
+
+.is-searchable
+    &.is-open > .Select-control
+        cursor: text
+
+.is-open > .Select-control
+    +round($border-radius, top)
+    background: $select-input-bg
+    //border-color: darken($select-input-border-color, 10%) $select-input-border-color lighten($select-input-border-color, 5%)
+
+    // flip the arrow so its pointing up when the menu is open
+    //.Select-arrow
+    //    top: -2px
+    //    border-color: transparent transparent $select-arrow-color
+    //    border-width: 0 $select-arrow-width $select-arrow-width
+
+.is-focused:not(.is-open) > .Select-control
+        cursor: text
+
+//.is-searchable
+//    &.is-focused:not(.is-open) > .Select-control
+//        cursor: text
+
+//.is-focused:not(.is-open) > .Select-control
+//    border-color: $select-input-border-focus lighten($select-input-border-focus, 5%) lighten($select-input-border-focus, 5%)
+//    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px -1px fade($select-input-border-focus, 50%)
+
+// placeholder
+
+//.Select-placeholder,
+//.Select--single .Select-control .Select-value
+
+.Select-placeholder
+    position: absolute
+    right: 0
+    bottom: 0
+    top: 0
+    left: 0
+
+    color: $select-input-placeholder
+
+    line-height: $select-input-internal-height
+    padding: $FORM__padding
+
+
+    // crop text
+    max-width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+.has-value.Select--single > .Select-control .Select-value,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value
+    .Select-value-label
+        color: $select-text-color
+
+    a.Select-value-label
+        cursor: pointer
+        text-decoration: none
+
+        &:hover,
+        &:focus
+            color: $select-link-hover-color
+            outline: none
+            text-decoration: underline
+
+// the <input> element users type in
+
+.Select-input
+    // inherits `display: inline-block` from "react-input-autosize"
+    display: table-cell
+
+    line-height: $FORM__lineHeight
+    padding: $FORM__padding
+    //padding-left: 0
+    vertical-align: middle
+
+    > input
+        background: none transparent
+        border: 0 none
+        box-shadow: none
+        cursor: default
+        display: inline-block
+        max-width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        font-family: inherit
+        font-size: inherit
+        // height: $select-input-internal-height
+        margin: 0
+        outline: none
+        // padding: 0
+        line-height: 14px
+        /* For IE 8 compatibility */
+        padding: (($select-input-internal-height - 14) / 2 - 2) 0 (($select-input-internal-height - 14) / 2 + 2)
+        /* For IE 8 compatibility */
+        -webkit-appearance: none
+
+        .is-focused &
+            cursor: text
+
+// fake-hide the input when the control is pseudo-focused
+.has-value.is-pseudo-focused .Select-input
+    opacity: 0
+
+// fake input
+.Select-control:not(.is-searchable) > .Select-input
+    outline: none
+
+// loading indicator
+.Select-loading-zone
+    cursor: pointer
+    display: table-cell
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: $select-loading-size
+
+.Select-loading
+    +Select-spinner($select-loading-size, $select-loading-color-bg, $select-loading-color)
+    vertical-align: middle
+
+// the little cross that clears the field
+
+.Select-clear-zone
+    +animation(Select-animation-fadeIn 200ms)
+    color: $select-clear-color
+    cursor: pointer
+    display: table-cell
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 1rem
+
+    &:hover
+        color: $select-clear-hover-color
+
+.Select-clear
+    display: inline-block
+    font-size: $select-clear-size
+    //line-height: 1
+    vertical-align: middle
+
+.Select--multi .Select-clear-zone
+    width: $select-clear-width
+
+.Select--multi .Select-multi-value-wrapper
+    display: inline-block
+
+.Select-multi-value-wrapper
+    .Select-value
+        display: inline-block
+        padding-left: 1rem
+
+.Select .Select-aria-only
+    display: inline-block
+    height: 1px
+    width: 1px
+    margin: -1px
+    clip: rect(0, 0, 0, 0)
+    overflow: hidden
+
+// arrow indicator
+
+.Select-arrow-zone
+    cursor: pointer
+    display: table-cell
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 2rem
+    padding-right: $select-arrow-width
+    font: normal normal normal 2rem/1 FontAwesome
+
+
+
+
+    //background: url('data:image/gif;base64,R0lGODlhDwAIAIABAFJSUv///yH5BAEAAAEALAAAAAAPAAgAAAIQjA2nG+C8nIS0WiafnbfVAgA7') 100% 50% no-repeat
+
+
+.Select-arrow
+    //display: inline-block
+    //position: relative
+
+    &:after
+        content: "\f107"
+
+.is-open
+
+    .Select-arrow
+        display: inline-block
+        position: relative
+
+        &:after
+            content: "\f106"
+
+
+
+    //border-color: $select-arrow-color transparent transparent
+    //border-style: solid
+    //border-width: $select-arrow-width $select-arrow-width ($select-arrow-width / 2)
+    //
+    //height: 0
+    //width: 0
+
+
+//.is-open .Select-arrow,
+//.Select-arrow-zone:hover > .Select-arrow
+//    border-top-color: $select-arrow-color-hover
+
+// Animation
+// ------------------------------
+
+// fade in
+
+@-webkit-keyframes Select-animation-fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes Select-animation-fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+

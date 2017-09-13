@@ -1,0 +1,47 @@
+.phone_bar_wrapper
+  &__add
+    color: $color-theme
+  .phone-bar
+    margin: 1rem 0 .5rem
+
+  .phone_bar__scratch
+    position: relative
+
+  .phone_bar__comment
+    position: absolute
+    top: 3.2rem
+    left: -16rem
+    z-index: 1001
+
+  .phone_bar__tooltip
+    top: 3.5rem
+    left: -9.5rem
+    display: none
+
+  .footer__popover
+    .button, .button-primary
+      border-radius: .3rem
+      width: 10rem
+
+
+  .scratch__item:hover
+    .phone_bar__tooltip
+      display: block
+
+  .open_menu:hover
+    .dropdown
+      display: block
+
+  .active_comment
+    color: $color-theme
+
+  .error-active
+    margin-left: 1px
+
+  .Select-option
+
+    &:last-child
+      color: $color-theme
+
+    &.is-focused
+      color: #fff

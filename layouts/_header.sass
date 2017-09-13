@@ -1,0 +1,119 @@
+.app-header
+    display: block
+    padding: 1rem 2rem
+    margin:
+        top: 0
+        bottom: 2rem
+        left: -2rem
+        right: -2rem
+    vertical-align: top
+    border-bottom: 1px solid $color-border
+    line-height: 3.4rem
+
+    &:after
+        display: block
+        clear: both
+        content: ''
+
+    .wrapper
+        display: block
+        //margin-left: 40%
+        text-align: right
+
+    .heading
+        float: left
+        margin: 0
+        text-transform: capitalize
+
+    .breadcrumbs
+        float: left
+        margin: 0
+        font-size: 1.6rem
+
+
+    .panel-search
+        display: inline-block
+        width: 400px
+        margin-right: 2rem
+        vertical-align: middle
+
+    .back-to
+        float: left
+        width: 5rem
+        height: 5.5rem
+        margin: -1rem 1rem -1rem -2rem
+        text-align: center
+
+        background: #f1f1f1
+        color: $color-theme
+        cursor: pointer
+
+        .fa
+            margin-left: -.3rem
+            font-size: 3rem
+            line-height: 1.6rem
+
+        &:hover
+            background: $color-theme
+            color: #fff
+
+    .button-primary
+        min-width: 15rem
+
+    .btn
+        vertical-align: middle
+
+
+
+    .fa-angle-down
+        color: $color-theme
+
+    .dropdown
+        line-height: 2rem
+        min-width: 20rem
+
+    .more,
+    .more-options
+        display: inline-block
+        vertical-align: middle
+        margin-left: 1rem
+        //.button
+        //    border-color: #d4c793
+
+
+
+.app-header__icon
+    display: inline-block
+    font-size: 2.8rem
+    color: $color-theme
+    margin: 0 1rem 0 0
+    vertical-align: middle
+
+    .fa
+        font-size: inherit
+        vertical-align: top
+
+
+.statistics-data__info
+    display: inline-block
+    padding: 0
+    margin: 0 2rem
+    list-style: none
+    font-size: 1.5rem
+    vertical-align: middle
+
+    .item
+        display: inline
+        padding: 0
+        margin: 0
+        list-style: none
+
+        &:after
+            display: inline
+            margin: 0 2rem
+            color: $color-light
+            content: '/'
+
+        &:last-child
+            &:after
+                display: none

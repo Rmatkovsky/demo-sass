@@ -1,0 +1,83 @@
+
+
+////Form
+//$FORM__fontSize     : $BaseFontSize
+//$FORM__fontFamily   : $FontFamily
+//$FORM__lineHeight   : $BaseLineHeight
+//$FORM__padding      : .5rem 1.2rem
+//$FORM__borderColor  : #d4c793
+//$FORM__borderColor_focus : $color-bronze
+//$FORM__border       : 1px solid $FORM__borderColor
+//$FORM__color        : $color-text
+//$FORM__background   : #fff
+//$FORM__shadow       : rgba(50, 185, 240, 0.1 )
+//$FORM__shadow_hover : rgba(50, 185, 240, 0.75)
+//$FORM__height       : $FORM__fontSize + ($BaseFontSize * $BaseLineHeight) + .2rem
+//
+//$color__placeholder  : #d4d4d4
+
+
+
+// Variables
+// ------------------------------
+
+// control options
+$select-input-bg:                   #fff !default
+$select-input-bg-disabled:          #f9f9f9 !default
+$select-input-border-color:         $FORM__borderColor !default
+$select-input-border-radius:        4px !default
+$select-input-border-focus:         $FORM__borderColor !default // blue
+$select-input-border-width:         1px !default
+$select-input-height:               auto !default
+$select-input-internal-height:      $FORM__lineHeight !default
+$select-input-placeholder:          $color__placeholder !default
+$select-text-color:                 $FORM__color !default
+$select-link-hover-color:           $select-input-border-focus !default
+
+$select-padding-vertical:           .5rem !default
+$select-padding-horizontal:         1.2rem !default
+
+// menu options
+$select-menu-zindex:                1000 !default
+$select-menu-max-height:            200px !default
+
+$select-option-color:               lighten($select-text-color, 20%) !default
+$select-option-bg:                  $select-input-bg !default
+$select-option-focused-color:       $select-text-color !default
+$select-option-focused-bg:          #f2f9fc !default // pale blue
+$select-option-selected-color:      $select-text-color !default
+$select-option-selected-bg:         #f5faff !default // lightest blue
+$select-option-disabled-color:      lighten($select-text-color, 60%) !default
+
+$select-noresults-color:            lighten($select-text-color, 40%) !default
+
+// clear "x" button
+$select-clear-size:                 1.5rem !default
+$select-clear-color:                #999 !default
+$select-clear-hover-color:          #D0021B !default // red
+$select-clear-width:                ($select-input-internal-height / 2) !default
+
+// arrow indicator
+$select-arrow-color:                #999 !default
+$select-arrow-color-hover:          #666 !default
+$select-arrow-width:                5px !default
+
+// loading indicator
+$select-loading-size:               16px !default
+$select-loading-color:              $select-text-color !default
+$select-loading-color-bg:           $select-input-border-color !default
+
+// multi-select item
+$select-item-border-radius:         2px !default
+$select-item-gutter:                5px !default
+$select-item-padding-vertical:      2px !default
+$select-item-padding-horizontal:    5px !default
+$select-item-font-size:             .9em !default
+$select-item-color:                 #08c !default // pale blue
+$select-item-bg:                    #f2f9fc !default
+$select-item-border-color:          darken($select-item-bg, 10%) !default
+$select-item-hover-color:           darken($select-item-color, 5%) !default // pale blue
+$select-item-hover-bg:              darken($select-item-bg, 5%) !default
+$select-item-disabled-color:        #333 !default
+$select-item-disabled-bg:           #fcfcfc !default
+$select-item-disabled-border-color: darken($select-item-disabled-bg, 10%) !default

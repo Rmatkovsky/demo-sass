@@ -1,0 +1,120 @@
+.app-sidebar
+    position: relative
+
+    //display: none
+
+    float: left
+    width: 10rem
+    height: 100%
+    padding: 0
+    //background: rgba(255, 255, 255, 0.85)
+    background: #fff
+    border-right: 1px solid #d4d4d4
+    +box-sizing(border-box)
+
+    z-index: 110
+
+    .item
+        position: relative
+        display: block
+        text-align: center
+        padding: 10px 0
+        font-size: 1.2rem
+        color: $color-bronze
+        text-align: center
+        cursor: pointer
+        +box-sizing()
+        +user-select()
+
+        &:hover
+            color: $color-bronze-dark
+            background: #f1f1f1
+
+        &.active
+            color: $color-bronze-dark
+            background: #f1f1f1
+            cursor: default
+
+    .fa
+        font-size: 2.4rem
+
+    .name
+        display: block
+        margin-top: .5rem
+
+    .arrow:after
+        position: relative
+        display: inline
+        vertical-align: middle
+        top: -1px
+        +arrow(right, 4px, $color-link)
+        content: ''
+
+    .dropdown
+        left: 100%
+        top: 0
+        //margin-left: 2px
+
+    @media (max-height: 700px)
+
+        .name
+            display: none
+
+
+.app-user-bar
+    position: absolute
+    width: 100%
+    bottom: 0
+    left: 0
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
+    padding: 2rem 0
+    text-align: center
+    background: #fff
+
+    .dropdown
+        padding: 1rem 0
+        min-width: 18rem
+        top: auto
+        bottom: 0
+        background: #f1f1f1
+
+    .fa-sign-out
+        font-size: 1.6rem
+        vertical-align: middle
+        color: inherit
+        margin: -.1rem 0 0 .5rem
+
+
+.user-bar
+    display: block
+    padding: 0 1rem
+    margin: 0 0 1rem
+    text-align: center
+    cursor: pointer
+
+    .username
+        display: block
+        width: 100%
+        margin: 1rem 0 0
+        overflow: hidden
+        text-overflow: ellipsis
+        font-size: 1.2rem
+        white-space: nowrap
+
+.avatar
+    display: block
+    width: 5rem
+    height: 5rem
+    overflow: hidden
+    +round(50%)
+    margin: 0 auto
+    border: 1px solid $color-border
+
+    .fa
+        font-size: 5rem
+        color: #f3f3f3
+        background: #fff
+
+
+
+

@@ -1,0 +1,263 @@
+//-------------------------------------------------------------------------------
+// Common
+//-------------------------------------------------------------------------------
+
+
+
+
+$mobile-width:  480px
+$tablet-width:  769px
+$desktop-width: 1024px
+$large-desktop-width: 1140px
+
+$autoprefixer : true // false or true
+
+$border-radius : .3rem
+
+//-------------------------------------------------------------------------------
+// Paths
+//-------------------------------------------------------------------------------
+
+$images                 : '../../images/'
+$fonts                  : '../../fonts/'
+
+//-------------------------------------------------------------------------------
+// Fonts
+//-------------------------------------------------------------------------------
+
+
+// BASE Font
+$BaseFontSize   : 1.4rem
+$BaseLineHeight : 1.6
+
+$FontFamily : 'Roboto', sans-serif
+
+// Font-sizes
+$font-xlg               : 2.2rem
+$font-lg                : 2rem
+$font-md                : 1.8rem
+$font-sm                : 1.3rem
+$font-xs                : 1.2rem
+$font-xxs               : 1.1rem
+
+// Title/subtitle variables
+$title                  : $font-xlg
+$subtitle-main          : $font-lg
+$title-section          : $font-md
+$subtitle-section       : $font-sm
+$title-item             : $font-xs
+
+// Text variables
+$text-main              : $font-sm
+$text-footer            : $font-xxs
+$text-input             : $font-xs
+$text-input-label       : $font-xxs
+$text-btn               : $font-sm
+$text-link              : $font-xs
+
+
+
+
+$Font : ''
+$Wallpaper : #fff
+
+
+
+// Grid: default 940px
+$gridColumns     : 12
+//$gridColumnWidth : 60px
+$gridGutterWidth : 20px
+$gridColumnWidth : (($large-desktop-width - $gridGutterWidth) / $gridColumns) - $gridGutterWidth
+
+
+
+
+//-------------------------------------------------------------------------------
+// Colors palette
+//-------------------------------------------------------------------------------
+
+$color-text   : #4c5256
+$color-text-light : #aeaeae
+$color-red    : #df280a
+$color-green  : #3fbb23
+$color-blue   : #1da9fc
+$color-orange : #ff6f00
+$color-border : #d4d4d4
+$color-border-light : #e0e0e0
+$color-light  : #777777
+$color-white  : #fff
+$color-black  : #
+
+// Theme
+$color-theme : $color-bronze
+
+
+
+$gray                   : #AEAEAE
+$gray-dark              : #4C5256
+$gray-light-1           : #A0A3A5
+$gray-light-2           : #C1C3C4
+$gray-light-3           : #A5A8AA
+$gray-light-4           : #F5F4F0
+
+$bronze : $color-bronze
+$bronze-dark            : #847648
+$bronze-light-1         : #E5E2D8
+$bronze-light-2         : #E0DCD0
+
+$red                    : #C94D4D
+
+$white                  : #FFFFFF
+$white-smoke            : #F3F3F3
+
+$bg-light : #f7f7f7
+
+
+
+
+$color-link   : $color-bronze
+$color-link__hover : #5b533b
+$color_link   : $color-bronze
+
+
+
+
+
+//-------------------------------------------------------------------------------
+// Colors variables
+//-------------------------------------------------------------------------------
+
+
+// Text color
+$text-color             : $gray-dark
+$text-color--disabled   : $gray-light-2
+$text-placeholder       : $gray-light-3
+
+// Link color
+$link-color             : $bronze
+
+// Btn color
+$btn-color              : $bronze
+$btn-color--white       : $white
+
+// Btn background
+$btn-bg                 : $bronze
+$btn-bg--hover          : $white-smoke
+$btn-full-bg--hover     : $bronze-dark
+
+// Border
+$border-color           : $bronze
+$border-line            : #e1e2e3
+
+// Placeholder
+$placeholder            : $gray-light-3
+
+// Search highlight
+$color-highlight        : yellow
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Alert
+$warning__background : $color-orange
+$success__background : $color-green
+$error__background   : $color-red
+$info__background    : $color-blue
+
+$warning__color : darken($color-orange, 40%)
+$success__color : darken($color-green, 40%)
+$error__color   : darken($color-red, 40%)
+$info__color    : darken($color-blue, 40%)
+
+//Forms
+$FORM__fontSize     : $BaseFontSize
+$FORM__fontFamily   : $FontFamily
+//$FORM__lineHeight   : $BaseLineHeight
+$FORM__lineHeight   : 2rem
+$FORM__padding      : .6rem 1.2rem
+$FORM__borderColor  : #d4c793
+$FORM__borderColor_focus : $color-bronze
+$FORM__border       : 1px solid $FORM__borderColor
+$FORM__color        : $color-text
+$FORM__background   : #fff
+$FORM__shadow       : rgba(50, 185, 240, 0.1 )
+$FORM__shadow_hover : rgba(50, 185, 240, 0.75)
+$FORM__height       : $FORM__fontSize + ($BaseFontSize * $BaseLineHeight) + .2rem
+
+$color__placeholder  : #d4d4d4
+
+$options__color      : $color-text
+$options__background : #fff
+$options__border     : $color-border
+
+
+
+
+//BUTTON
+$btn__color            : $color-bronze
+$btn__background       : #fff
+$btn__border-color     : #d4c793
+$btn__hover_background : #eee
+$btn__focus_background : #eee
+
+//BUTTON Primary
+$btn_primary__color      : #fff
+$btn_primary__background : $color-bronze
+$btn_primary__border: $color-bronze
+
+//BUTTON Action
+$btn_action__color      : $color-text
+$btn_action__background : #e0e0e0
+$btn_action__border     : transparent
+
+$btn_action__hover_background : $color-border
+
+//BUTTON Success
+$btn_success__color      : #fff
+$btn_success__background : $success__background
+
+//BUTTON Danger
+$btn_danger__color      : #fff
+$btn_danger__background : $error__background
+
+//BUTTON Cancel
+$btn_cancel__color      : $color-text
+$btn_cancel__background : #fff
+$btn_cancel__border     : $color-border
+
+
+
+// Z-Index
+
+$z-index__notification : 1000
+$z-index__modal : 1000
+
+
+// PATH Images
+$PATH      : '../images/'
+
+$PATH_LOGO      : $PATH + 'logo.gif'
+//$PATH_MENU      : $PATH + 'icons/menu.svg'
+//$PATH_ICONS     : $PATH + 'icons/icons.svg'
+
+$PATH_CHECKBOX : $PATH + 'icons/check.svg'
+//$PATH_CHECKBOX : $PATH + 'icons/icons.svg'
+
+
+//@mixin logo
+//    background-image: url($PATH_logo)
+//    background-repeat: no-repeat
+//
+//    +pixel-ratio
+//        background-image: url($PATH_logo_x2)
+//        background-size: 195px 40px
+

@@ -1,0 +1,125 @@
+.dropdown
+    display: none
+    position: absolute
+    max-width: 300px
+    font-size: $BaseFontSize
+    color: $color-text
+    text-align: left
+    background: #fff
+    border: 1px solid $color-border
+    box-shadow: 0 5px 10px rgba(0,0,0,.2)
+    //+round()
+    z-index: 1000
+
+    //&:after
+    //    position: absolute
+    //    right: 8px
+    //    top: 16px
+    //    border-right: 5px solid transparent
+    //    border-left: 5px solid transparent
+    //    border-top: 6px solid #ff6f00
+    //    content: ''
+
+    &.show
+        display: block
+
+    &.arrow-larr
+        &:before
+            position: absolute
+            +arrow(left, 9px , $color-border)
+            content: ''
+
+        &:after
+            position: absolute
+            margin-left: 1px
+            +arrow(left, 9px , #fff)
+            content: ''
+
+
+    &.arrow-uarr
+        &:before
+            position: absolute
+            +arrow(top, 7px , $color-border)
+            content: ''
+
+        &:after
+            position: absolute
+            margin-top: 1px
+            +arrow(top, 7px , #fff)
+            content: ''
+
+    &.__top
+        &:before
+            top: 10px
+        &:after
+            top: 10px
+
+    &.__bottom
+        &:before
+            bottom: 10px
+        &:after
+            bottom: 10px
+
+    &.__left
+        &:before
+            left: 10px
+        &:after
+            left: 10px
+
+    &.__right
+        &:before
+            right: 10px
+        &:after
+            right: 10px
+
+
+.dropdown-menu
+    display: block
+    padding: 0
+    margin: 0
+    list-style: none
+
+
+.dropdown-item,
+.dropdown-head
+    display: block
+    padding: 1rem 2rem
+    margin: 0
+    list-style: none
+    border-bottom: 1px solid $color-border
+    margin-bottom: -1px
+    color: $color-text
+    text-decoration: none
+    min-width: 120px
+    cursor: pointer
+
+
+    &:first-child
+        +round(top)
+
+    &:last-child
+        border: 0 none
+        +round(bottom)
+
+
+    &.head
+        background: $bg-light
+
+    &:hover
+        //background: #f1f1f1
+        //color: $color-link
+
+        background: $color-theme
+        color: #fff
+        border-bottom-color: $color-theme
+        text-decoration: none
+
+        .fa
+            color: inherit
+
+    &.active,
+    &.active:hover
+        background: $bg-light
+        color: $color-text
+        cursor: default
+

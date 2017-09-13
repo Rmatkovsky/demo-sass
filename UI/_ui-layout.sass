@@ -1,0 +1,157 @@
+.ui-demo-page
+    height: 100%
+    padding: 0 2rem
+    +box-sizing()
+    overflow: auto
+
+.ui-style-guide
+    height: 100%
+    padding: 3rem 4rem
+    +box-sizing()
+    overflow: auto
+
+    h1
+        font:
+            size: 3rem
+            weight: 300
+        margin: 0
+
+.ui__header
+    display: block
+    margin-bottom: 6rem
+
+.ui__section
+    display: block
+    margin-bottom: 6rem
+
+    .container-modal
+        display: table
+        width: 100%
+
+    .checkbox-list
+        margin-top: 1rem
+
+    //.container-table:last-child
+    //    margin-bottom: 2rem
+
+.ui__article
+    display: block
+    margin-bottom: 6rem
+
+.ui__title
+    font:
+        size: 3rem
+        weight: 300
+    margin: 0 0 2rem
+
+    &:after
+        display: block
+        width: 3rem
+        height: .2rem
+        background: #000
+        content: ''
+
+.ui__thumbnails
+    display: flex
+    flex-wrap: wrap
+
+.ui__sub-title
+    font:
+        size: 2rem
+        weight: 300
+    margin: 2rem 0
+
+.ui__delimeter
+    border-style: dotted
+    border-bottom: 0 none
+    border-color: $color-border
+    margin: 2rem 0
+
+.ui__notifications
+    position: relative
+    //width: 300px
+
+    .app-notifications
+        position: static
+        display: block
+
+    .type-confirmation
+        &:before
+            position: absolute
+
+
+
+
+
+
+pre.preview
+    position: relative
+    display: block
+    margin: 20px 0
+    border: 1px solid rgba(0, 0, 0, 0.9)
+    font-size: 1.2rem
+    line-height: 1.5
+    font-family: Menlo, Consolas, "Courier New", monospace
+    color: #afafaf
+    background: #2d2d2d
+    +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
+    border: 1px solid #ccc
+    border: 1px solid rgba(0, 0, 0, 0.15)
+    white-space: pre
+    white-space: pre-line
+
+    em
+        color: #cb4b16
+        font-style: normal
+
+    i
+        color: #268bd2
+        font-style: normal
+
+
+    .legend
+        position: relative
+        display: block
+        padding: 6px 12px 6px 6px
+        text-shadow: 0 -1px 0 #121212
+        border-bottom: 1px solid #000
+        line-height: 18px
+
+        background: #222
+        +box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.1))
+
+        z-index: 2
+
+        &:before
+            display: inline-block
+            padding-left: 50px
+            margin-right: 5px
+            height: 15px
+            //background: url($path_pre) 0 1px no-repeat
+            content: "Example"
+
+.prettyprint
+    display: block
+    padding: 2rem 0
+    margin: 0 0 0 42px
+    color: #afafaf
+
+    &:before
+        position: absolute
+        top: 0
+        left: 0
+        width: 40px
+        height: 100%
+        background: rgba(20, 20, 20, 0.5)
+        content: ''
+        z-index: 1
+
+
+    li
+        list-style: decimal-leading-zero outside none
+        padding-left: 12px
+        white-space: pre
+
+
+
+

@@ -1,0 +1,185 @@
+// Input
+.field-item
+    position: relative
+    margin-bottom: 1rem
+
+
+
+
+.field-item__input
+    +round()
+
+    appearance: none
+    background: rgba(255, 255, 255, 0.97)
+    border: .1rem solid $bronze-light-1
+    color: $text-color
+    display: block
+    font-weight: 400
+    height: 4.2rem
+    line-height: 1
+    outline: 0
+    padding: 1.15rem .8rem
+    transition: all 0.2s ease-in-out
+    width: 100%
+
+    &:focus
+        background: rgba(255, 255, 255, 1)
+        border: .1rem solid $border-color
+        padding: 1.8rem .8rem .5rem
+
+    &:focus + label
+        font-size: $font-xxs
+        transform: translate3d(0, -1rem, 0)
+        top: 1.5rem
+
+.field-item__text
+    color: $text-placeholder
+    font-size: $font-xs
+    left: .8rem
+    margin: 0
+    position: absolute
+    top: 1.15rem
+    transform: translate3d(0, 0, 0)
+    transition: all 0.2s ease-in-out
+
+
+
+
+
+
+
+// Input group
+.field-group
+    display: flex
+
+    .field-item
+        flex-grow: 1
+
+        &:first-child
+            .field-item__input
+                +round($border-radius 0 0 $border-radius)
+
+                &:focus
+                    position: relative
+                    z-index: 100
+
+        &:last-child
+            .field-item__input
+                +round(0 $border-radius $border-radius 0)
+
+                position: relative
+                right: .1rem
+
+    .field-item__text
+        z-index: 100
+
+
+
+
+
+// Select
+.select-wrap
+    display: flex
+    align-items: center
+
+    .select-item
+        margin-bottom: 0
+
+.select-label
+    margin-right: 1rem
+    margin-bottom: 0
+
+.select-item
+    background: none
+    border: .1rem solid $bronze-light-1
+    color: $text-placeholder
+    display: block
+    font-size: $font-xs
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    height: 4.2rem
+    margin-bottom: 1rem
+
+    &:focus,
+    &:active
+        border: .1rem solid $border-color
+        outline: none
+
+// Radio
+.radio
+    display: none
+    margin: 0 .2rem .2rem .2rem
+    vertical-align: middle
+
+    & + .radio-label
+        cursor: pointer
+        color: $bronze
+
+        &:before
+            +round(50%)
+
+            position: relative
+            display: inline-block
+            width: 2rem
+            height: 2rem
+            margin: -.5rem .5rem 0 0
+            border: .1rem solid $bronze
+            background-color: $white
+            vertical-align: middle
+            cursor: pointer
+            content: ''
+
+    &:checked + .radio-label
+        color: inherit
+
+        &:before
+            border: .3rem solid $bronze
+            background-color: $white
+
+    &[disabled] + .radio-label
+        color: $gray-light-3
+        cursor: default
+
+        &:before
+            cursor: default
+
+// Cell
+.checkbox
+
+    position: absolute
+    left: -9999px
+
+    + .checkbox-label
+        color: $bronze
+        cursor: pointer
+        position: relative
+        padding-left: 25px
+
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 2px
+            width: 17px
+            height: 17px
+            border: 1px solid $bronze
+            border-radius: 3px
+
+        &:after
+            content: '✔'
+            color: $white
+            position: absolute
+            top: 0
+            left: 4px
+            font-size: 14px
+            transition: all .2s
+            opacity: 0
+
+    &:checked + .checkbox-label
+        color: inherit
+
+        &:before
+            background: $bronze
+
+        &:after
+            opacity: 1

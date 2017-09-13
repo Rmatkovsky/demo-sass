@@ -1,0 +1,194 @@
+=elementGroupForm
+    input
+        @content
+
+    select
+        @content
+
+    button
+        @content
+
+    .Select
+        @content
+
+    .button
+        @content
+
+
+.group-form
+
+    display: table
+    white-space: nowrap
+    vertical-align: middle
+
+    &.flexible
+        width: 100%
+
+    .cell
+        display: block
+        margin-right: -1px
+
+    +elementGroupForm
+        width: 100%
+        +box-sizing(border-box)
+        +round(0)
+
+    //input
+    //    &:focus
+    //        position: relative
+
+    .item,
+    .elem,
+    .add-on
+        display: table-cell
+        vertical-align: top
+
+
+
+    //.mini
+    //    width: 25%
+    //
+    //.small
+    //    width: 33%
+    //
+    //.middle
+    //    width: 50%
+
+    .check
+        width: 3rem
+
+    .elem
+        width: 100%
+
+    .item,
+    .elem
+        &:first-child
+            +elementGroupForm
+                +round($border-radius, left)
+
+            .Select-control
+                +round($border-radius, left)
+
+            .is-open
+                .Select-control
+                    border-bottom-left-radius: 0
+
+        &:last-child
+            +elementGroupForm
+                +round($border-radius, right)
+
+            .Select-control
+                +round($border-radius, right)
+
+            .is-open
+                .Select-control
+                    border-bottom-right-radius: 0
+
+    +elementGroupForm
+
+        &:focus
+            position: relative
+            outline: none
+            z-index: 10
+
+    .button
+
+        min-width: 2rem
+
+        &:hover
+            position: relative
+            outline: none
+            z-index: 10
+
+
+    .add-on
+        &:first-child
+            border-right: 0 none
+            +round($border-radius, left)
+
+        &:last-child
+            border-left: 0 none
+            +round($border-radius, right)
+
+    .active
+        position: relative
+        color: $btn_primary__color
+        background: $btn_primary__background
+        border-color: $btn_primary__border
+
+
+.switcher
+    display: none
+
+    & + .button
+        display: block
+        cursor: pointer
+
+    &:checked + .button
+        position: relative
+        color: $btn_primary__color
+        background: $btn_primary__background
+        border-color: $btn_primary__border
+
+
+//&[disabled] + .marker
+//    color: $color-light
+//    cursor: default
+
+
+
+
+.flex-group-form
+    display: table
+    width: 100%
+    white-space: normal
+    table-layout: fixed
+
+    //+box-sizing()
+
+    .small,
+    .mini,
+    .middle,
+    .item
+        display: table-cell
+        padding-right: 4px
+        +box-sizing()
+
+        &:last-child
+            padding-right: 0
+
+    .item
+        width: 1%
+
+
+
+.flex-field-form
+    display: block
+    margin: 0 -10px
+    white-space: nowrap
+
+    .small,
+    .mini,
+    .middle,
+    .large
+        display: inline-block
+        padding-right: 10px
+        padding-left: 10px
+        white-space: normal
+        +box-sizing()
+
+
+
+.group-change-field
+    display: table
+    width: 100%
+    table-layout: fixed
+
+    .item-area
+        display: table-cell
+        width: 8rem
+        text-align: right
+
+    .field-text
+        display: table-cell
+        word-wrap: break-word

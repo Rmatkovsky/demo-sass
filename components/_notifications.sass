@@ -1,0 +1,138 @@
+
+=notification($color_text, $background: #fff)
+    position: relative
+
+    //margin: 0 0 2rem
+    //padding: 1px 1px 1px 0
+
+    padding: 2px
+    border-bottom: 1px solid $color-border
+
+    //border-left: 5px solid $color_border
+    //background: #{rgba($background, .1)}
+
+    background: #fff
+    +user-select()
+    cursor: default
+
+    animation-name: show-notification
+    animation-duration: 1000ms
+    animation-fill-mode: forwards
+    animation-timing-function: ease-out
+
+
+
+    .title
+        margin: 0
+        color: $background
+
+    .wrapper
+        border-left: 10px solid $background
+        padding: 1.5rem 4rem 1.5rem 2rem
+
+
+    .close
+        width: 2.4rem
+        height: 2.4rem
+
+
+
+//=notificationsAnimation
+
+
+.item__notification
+    overflow: hidden
+
+    &.hidden
+
+        .notification-danger,
+        .notification-warning
+            animation-name: hide-notification
+            animation-duration: 1000ms
+            animation-fill-mode: forwards
+            animation-timing-function: ease-out
+            //animation-delay: 1s
+
+    .type-confirmation
+
+        .notification-danger,
+        .notification-warning
+            z-index: 1001
+
+        &:before
+            position: fixed
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            background: rgba(0,0,0,.25)
+            z-index: 1000
+            content: ''
+
+
+
+.app-notifications
+    display: none
+
+    position: fixed
+    top: 20px
+    right: 30px
+    width: 400px
+    border-left: 0 none
+    border-bottom: 0 none
+
+    +box-shadow(0 20px 40px rgba(0,0,0,.2))
+    z-index: $z-index__notification
+
+    .panel-button
+        display: table
+        margin: 2rem 0 0
+
+        .item
+            display: table-cell
+
+    .button-cancel,
+    .button-primary
+        min-width: 15rem
+
+
+
+// Danger
+
+.notification-danger
+
+    +notification($error__color, $error__background)
+
+
+
+
+
+.notification-warning
+
+    +notification($error__color, $warning__background)
+
+
+
+
+
+
+
+
+
+@keyframes show-notification
+    0%
+        margin-top: -1000px
+        opacity: 0
+    100%
+        margin-top: 0
+        opacity: 1
+
+
+@keyframes hide-notification
+    0%
+        margin-top: 0
+        opacity: 1
+
+    100%
+        margin-top: -200px
+        opacity: 1

@@ -1,0 +1,365 @@
+//*
+//    box-sizing: border-box
+
+html,
+body
+    height: 100%
+    width: 100%
+    padding: 0
+    margin: 0
+
+html
+    //height: 100%
+    font-size: 10px
+    overflow: hidden
+    //overflow-x: auto
+
+body
+    font-size: $font-sm
+    font-family: 'Roboto', sans-serif
+    line-height: 1.5
+    color: $color-text
+    overflow: hidden
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+
+
+.hide
+    display: none !important
+
+.show
+    display: block !important
+
+
+
+.fa
+    &.fa-ellipsis-h
+        font-size: 2.4rem
+
+// placeholder
+%list-reset
+    list-style: none
+    margin: 0
+    padding: 0
+
+#r-view
+    display: block
+    width: 100%
+    height: 100%
+    //+box-sizing()
+
+.app-layout
+    display: block
+    width: 100%
+    height: 100%
+
+.app-content
+    display: block
+    //margin: 0 0 0 12.1rem
+    //min-width: 960px
+    //min-width: 96rem
+    height: 100%
+
+    .container-modal
+        display: table-row
+        position: relative
+
+
+.app-content__wrapper
+    display: table
+    height: 100%
+    width: 100%
+
+.app-main
+    display: table-row
+    width: 100%
+    height: 100%
+
+.app-main__wrapper
+    position: relative
+    //display: table-cell
+    width: 100%
+    height: 100%
+    overflow-y: auto
+    overflow-x: hidden
+    -webkit-overflow-scrolling: touch
+
+.app-main__content
+    position: absolute
+    display: block
+    padding: 0 2rem
+    width: 100%
+    height: 100%
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+    +box-sizing()
+
+.app-container
+    padding: 2rem
+
+
+
+
+
+.app-content
+    display: block
+    margin: 0 0 0 10rem
+    height: 100%
+
+
+    //.app-main__content
+        //max-height: 400px
+
+    .modal
+        max-height: 500px
+
+    @media (max-height: 900px)
+        .modal
+            max-height: 500px
+
+    @media (max-height: 850px)
+        .modal
+            max-height: 400px
+
+    @media (max-height: 750px)
+        .modal
+            max-height: 350px
+
+    @media (max-height: 700px)
+        .modal
+            max-height: 300px
+
+    // refactoring
+
+    .content-modal
+        max-height: 500px
+
+    @media (max-height: 900px)
+        .content-modal
+            max-height: 500px
+
+    @media (max-height: 850px)
+        .content-modal
+            max-height: 400px
+
+    @media (max-height: 750px)
+        .content-modal
+            max-height: 350px
+
+    @media (max-height: 700px)
+        .content-modal
+            max-height: 300px
+
+
+
+// Full screen
+
+.full-screen
+
+    .fa-expand
+        &:before
+            content: "\f066"
+
+    .app-main
+        display: none
+
+    .app-modal
+        border: 0 none
+        max-height: 100%
+        +box-shadow(none)
+
+    .modal,
+    .content-modal
+        position: absolute
+        left: 0
+        right: 0
+        top: 58px
+        bottom: 54px
+        max-height: 100%
+
+    .container-modal
+        height: 100%
+        //display: block
+
+    .app-modal
+        padding-top: 58px
+
+    .header-modal
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+
+    .footer-modal
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        margin: 0
+
+    // Delete after fix
+    .modal__view-roles
+
+        padding-top: 77px
+
+        .modal
+            top: 58px
+
+        .description__users-role
+            display: block
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+
+
+
+.app-main
+
+    &:last-child
+
+        .app-main__content
+            position: static
+
+
+.container
+    padding: 0 20px
+
+.logo-arvini
+    display: block
+    width: 50px
+    height: 55px
+    margin: 20px auto
+    background:
+        image: url($PATH_LOGO)
+        repeat: no-repeat
+        position: 0 0
+        size: cover
+
+.main-menu
+    margin: 0 0 150px
+
+.operation-type
+    display: inline-block
+    width: 100%
+    vertical-align: top
+    margin: 0 0 1rem
+    cursor: pointer
+
+    .item
+        margin-right: 2rem
+        font-size: 1.4rem
+
+
+
+.box-panel
+    display: block
+    margin: 0 0 2rem
+
+
+
+.app-footer
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 0 -2rem
+    padding: 1rem 2rem
+    background: $bg-light
+
+    .wrapper
+        display: inline-block
+        width: 100%
+        vertical-align: top
+
+    .panel-button
+        float: right
+
+    .button,
+    .button-primary
+        min-width: 150px
+
+
+    .btn
+        vertical-align: middle
+
+
+.clippers
+    display: block
+    max-width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+
+.developer-info
+    position: fixed
+
+    bottom: 0
+    left: 100px
+
+    max-width: 300px
+    padding: 1rem 2rem
+
+    color: #fff
+    font-size: 1.2rem
+
+    background: rgba(0,0,0,.75)
+
+
+
+// Close
+
+
+.close
+    position: absolute
+    top: 1rem
+    right: 1rem
+    width: 1.4rem
+    height: 1.4rem
+    +rotate(45deg)
+    cursor: pointer
+
+    &:before,
+    &:after
+        position: absolute
+        content: ''
+
+    &:before
+        top: 50%
+        left: 0
+        width: 100%
+        border-top: 2px solid $color-border
+        margin: -1px 0 0 0
+
+    &:after
+        top: 0
+        left: 50%
+        height: 100%
+        border-left: 2px solid $color-border
+        margin: 0 0 0 -1px
+
+    &:hover
+        &:before
+            border-top-color: $color-link
+        &:after
+            border-left-color: $color-link
+
+
+
+// Form > New Client
+// --------------------------------------------------------------------
+// Layout
+
+.form__view
+    padding-left: 1rem
+
+    .section-form
+        padding-left: 1rem
+        padding-right: 8rem
+
+
+
+    .title
+        margin-left: -1rem
+
+    .field-set
+        margin: 0 0 4rem
